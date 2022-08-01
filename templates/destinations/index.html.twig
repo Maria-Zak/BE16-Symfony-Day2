@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% for destination in destinations %}
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ destination.name }}</h5>
+    <p class="card-text">{{ destination.price }}</p>
+    <p class="card-text">{{ destination.location }}</p>
+    <a href="/destinations/{{destination.id}}" class="btn btn-success"> Details</a>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
